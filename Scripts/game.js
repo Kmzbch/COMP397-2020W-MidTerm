@@ -17,6 +17,7 @@ var Game = (function () {
         { id: "ocean", src: "./Assets/images/ocean.gif" },
         { id: "plane", src: "./Assets/images/plane.png" },
         //
+        { id: "blank", src: "./Assets/images/blank.png" },
         { id: "rollButton", src: "./Assets/images/rollButton.png" },
     ];
     function Preload() {
