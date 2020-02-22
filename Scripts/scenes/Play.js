@@ -16,7 +16,6 @@ var scenes;
 (function (scenes) {
     var Play = /** @class */ (function (_super) {
         __extends(Play, _super);
-        // PRIVATE INSTANCE MEMBERS
         // PUBLIC PROPERTIES
         // CONSTRUCTOR
         function Play() {
@@ -28,11 +27,17 @@ var scenes;
         // PUBLIC METHODS
         //initialize and instatiate
         Play.prototype.Start = function () {
+            // buttons
+            this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 430, true);
             this.Main();
         };
         Play.prototype.Update = function () {
         };
         Play.prototype.Main = function () {
+            this.addChild(this._rollButton);
+            this._rollButton.on("click", function () {
+                //                config.Game.SCENE = scenes.State.PLAY;
+            });
         };
         return Play;
     }(objects.Scene));
