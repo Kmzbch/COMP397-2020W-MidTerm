@@ -1,9 +1,4 @@
 "use strict";
-// Author: Kei Mizubuchi(30093630)
-// Date: Feb 22, 2020
-// Description: 
-// COMP397 Web Game Programming Mid-term test.
-// Player rolls two dice with the roll button and get the result on the Play scene
 //IIFE - Immediately Invoked Function Expression
 //means -> self-executing anonymous function
 var Game = (function () {
@@ -30,6 +25,7 @@ var Game = (function () {
         { id: "4", src: "./Assets/images/4.png" },
         { id: "5", src: "./Assets/images/5.png" },
         { id: "6", src: "./Assets/images/6.png" },
+        { id: "clickMeButton", src: "./Assets/images/clickMeButton.png" },
     ];
     function Preload() {
         assets = new createjs.LoadQueue(); // asset container
@@ -82,6 +78,10 @@ var Game = (function () {
             case scenes.State.PLAY:
                 console.log("switch to Play Scene");
                 currentScene = new scenes.Play();
+                break;
+            case scenes.State.NEXT:
+                console.log("switch to Next Scene");
+                currentScene = new scenes.Next();
                 break;
             case scenes.State.END:
                 console.log("switch to End Scene");

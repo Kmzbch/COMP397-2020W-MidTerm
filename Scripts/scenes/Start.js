@@ -14,6 +14,17 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var scenes;
 (function (scenes) {
+    /**
+ * Author: Kei Mizubuchi(30093630)
+ * Date: Feb 22, 2020
+ * Description:
+ * COMP397 Web Game Programming Mid-term test.
+ * Player rolls two dice with the roll button and get the result on the Play scene
+ *
+ * @export
+ * @class Dice
+ * @extends {GameObject}
+ */
     var Start = /** @class */ (function (_super) {
         __extends(Start, _super);
         // PUBLIC PROPERTIES
@@ -27,9 +38,9 @@ var scenes;
         // PUBLIC METHODS
         Start.prototype.Start = function () {
             //instantiate a new Text object
-            this._welcomeLabel = new objects.Label("COMP397 - Midterm Test", "40px", "Consolas", "#000000", 320, 180, true);
+            this._welcomeLabel = new objects.Label("COMP397 - Midterm Test", "40px", "Consolas", "#000000", 480, 180, true);
             // buttons
-            this._startButton = new objects.Button(config.Game.ASSETS.getResult("startButton"), 320, 430, true);
+            this._startButton = new objects.Button(config.Game.ASSETS.getResult("startButton"), 480, 430, true);
             this.Main();
         };
         Start.prototype.Update = function () {

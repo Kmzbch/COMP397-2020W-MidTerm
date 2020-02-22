@@ -1,10 +1,16 @@
-// Author: Kei Mizubuchi(30093630)
-// Date: Feb 22, 2020
-// Description: 
-// COMP397 Web Game Programming Mid-term test.
-// Player rolls two dice with the roll button and get the result on the Play scene
 module objects {
-    export class Dice extends GameObject {
+    /**
+     * Author: Kei Mizubuchi(30093630)
+     * Date: Feb 22, 2020
+     * Description: 
+     * COMP397 Web Game Programming Mid-term test.
+     * Player rolls two dice with the roll button and get the result on the Play scene
+     *
+     * @export
+     * @class Dice
+     * @extends {GameObject}
+     */
+    export class Die extends GameObject {
         // PRIVATE INSTANCE MEMBERS
 
         // PUBLIC PROPERTIES

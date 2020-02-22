@@ -1,13 +1,8 @@
-// Author: Kei Mizubuchi(30093630)
-// Date: Feb 22, 2020
-// Description: 
-// COMP397 Web Game Programming Mid-term test.
-// Player rolls two dice with the roll button and get the result on the Play scene
 
 //IIFE - Immediately Invoked Function Expression
 //means -> self-executing anonymous function
-let Game = (function () {
 
+let Game = (function () {
     // variable declarations
     let canvas: HTMLCanvasElement = document.getElementsByTagName('canvas')[0];
     let stage: createjs.Stage;
@@ -35,6 +30,7 @@ let Game = (function () {
             { id: "4", src: "./Assets/images/4.png" },
             { id: "5", src: "./Assets/images/5.png" },
             { id: "6", src: "./Assets/images/6.png" },
+            { id: "clickMeButton", src: "./Assets/images/clickMeButton.png" },
         ];
 
     function Preload(): void {
@@ -100,6 +96,11 @@ let Game = (function () {
                 console.log("switch to Play Scene");
                 currentScene = new scenes.Play();
                 break;
+            case scenes.State.NEXT:
+                console.log("switch to Next Scene");
+                currentScene = new scenes.Next();
+                break;
+
             case scenes.State.END:
                 console.log("switch to End Scene");
                 currentScene = new scenes.End();

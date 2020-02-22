@@ -12,19 +12,25 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-// Author: Kei Mizubuchi(30093630)
-// Date: Feb 22, 2020
-// Description: 
-// COMP397 Web Game Programming Mid-term test.
-// Player rolls two dice with the roll button and get the result on the Play scene
 var objects;
 (function (objects) {
-    var Dice = /** @class */ (function (_super) {
-        __extends(Dice, _super);
+    /**
+     * Author: Kei Mizubuchi(30093630)
+     * Date: Feb 22, 2020
+     * Description:
+     * COMP397 Web Game Programming Mid-term test.
+     * Player rolls two dice with the roll button and get the result on the Play scene
+     *
+     * @export
+     * @class Dice
+     * @extends {GameObject}
+     */
+    var Die = /** @class */ (function (_super) {
+        __extends(Die, _super);
         // PRIVATE INSTANCE MEMBERS
         // PUBLIC PROPERTIES
         // CONSTRUCTOR
-        function Dice(imageOrUri, x, y, isCentered) {
+        function Die(imageOrUri, x, y, isCentered) {
             if (x === void 0) { x = 0; }
             if (y === void 0) { y = 0; }
             if (isCentered === void 0) { isCentered = false; }
@@ -34,17 +40,17 @@ var objects;
             return _this;
         }
         // PRIVATE METHODS
-        Dice.prototype._checkBounds = function () {
+        Die.prototype._checkBounds = function () {
         };
         // PUBLIC METHODS
-        Dice.prototype.Start = function () {
+        Die.prototype.Start = function () {
         };
-        Dice.prototype.Update = function () {
+        Die.prototype.Update = function () {
         };
-        Dice.prototype.Reset = function () {
+        Die.prototype.Reset = function () {
         };
-        return Dice;
+        return Die;
     }(objects.GameObject));
-    objects.Dice = Dice;
+    objects.Die = Die;
 })(objects || (objects = {}));
-//# sourceMappingURL=Dice.js.map
+//# sourceMappingURL=Die.js.map
